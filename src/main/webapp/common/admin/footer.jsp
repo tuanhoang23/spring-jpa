@@ -1,0 +1,7 @@
+<footer class="py-4 bg-light mt-auto footer">
+	<div class="container-fluid px-4 mt-10">
+		<div class="d-flex align-items-center justify-content-between small">
+			<div class="text-muted">@myweb</div>
+		</div>
+	</div>
+</footer>

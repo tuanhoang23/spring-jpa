@@ -1,0 +1,543 @@
+Folder PATH listing for volume NTH
+Volume serial number is DA52-DA61
+D:.
+¦   .classpath
+¦   .project
+¦   .tern-project
+¦   pom.xml
+¦   project_structure.txt
+¦   structure.txt
+¦   
++---.idea
+¦       .gitignore
+¦       compiler.xml
+¦       jarRepositories.xml
+¦       misc.xml
+¦       workspace.xml
+¦       
++---.settings
+¦       .jsdtscope
+¦       org.eclipse.core.resources.prefs
+¦       org.eclipse.jdt.core.prefs
+¦       org.eclipse.jpt.core.prefs
+¦       org.eclipse.m2e.core.prefs
+¦       org.eclipse.wst.common.component
+¦       org.eclipse.wst.common.project.facet.core.prefs.xml
+¦       org.eclipse.wst.common.project.facet.core.xml
+¦       org.eclipse.wst.jsdt.ui.superType.container
+¦       org.eclipse.wst.jsdt.ui.superType.name
+¦       org.eclipse.wst.validation.prefs
+¦       org.hibernate.eclipse.console.prefs
+¦       
++---Database
+¦       InsertData.sql
+¦       
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦   +---com
+¦   ¦   ¦       +---spring
+¦   ¦   ¦           +---config
+¦   ¦   ¦           ¦       JPAAuditingConfig.java
+¦   ¦   ¦           ¦       JPAConfig.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---constant
+¦   ¦   ¦           ¦       SystemConstant.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---controller
+¦   ¦   ¦           ¦   +---admin
+¦   ¦   ¦           ¦   ¦       HomeController.java
+¦   ¦   ¦           ¦   ¦       NewsController.java
+¦   ¦   ¦           ¦   ¦       
+¦   ¦   ¦           ¦   +---web
+¦   ¦   ¦           ¦           HomeController.java
+¦   ¦   ¦           ¦           
+¦   ¦   ¦           +---DAO
+¦   ¦   ¦           ¦   ¦   genericDAO.java
+¦   ¦   ¦           ¦   ¦   icatagoriesDAO.java
+¦   ¦   ¦           ¦   ¦   iNewDAO.java
+¦   ¦   ¦           ¦   ¦   
+¦   ¦   ¦           ¦   +---impl
+¦   ¦   ¦           ¦           abstractDAO.java
+¦   ¦   ¦           ¦           catagoriesDAO.java
+¦   ¦   ¦           ¦           newDAO.java
+¦   ¦   ¦           ¦           
+¦   ¦   ¦           +---DTO
+¦   ¦   ¦           ¦       AbstractDTO.java
+¦   ¦   ¦           ¦       categoryDTO.java
+¦   ¦   ¦           ¦       MyUser.java
+¦   ¦   ¦           ¦       NewDTO.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---entity
+¦   ¦   ¦           ¦       BaseEntity.java
+¦   ¦   ¦           ¦       NewsEntity.java
+¦   ¦   ¦           ¦       RoleEntity.java
+¦   ¦   ¦           ¦       UserEntity.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---mapper
+¦   ¦   ¦           ¦       catagoryMapper.java
+¦   ¦   ¦           ¦       newMapper.java
+¦   ¦   ¦           ¦       rowMapper.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---model
+¦   ¦   ¦           ¦       abstractModel.java
+¦   ¦   ¦           ¦       catagoriesModel.java
+¦   ¦   ¦           ¦       newsModel.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---paging
+¦   ¦   ¦           ¦       Pageable.java
+¦   ¦   ¦           ¦       pageRequest.java
+¦   ¦   ¦           ¦       Sorter.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---repository
+¦   ¦   ¦           ¦       iNewRepository.java
+¦   ¦   ¦           ¦       UserRepository.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---security
+¦   ¦   ¦           ¦       CustomSuccessHandler.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---service
+¦   ¦   ¦           ¦   ¦   iCatagoriesService.java
+¦   ¦   ¦           ¦   ¦   iNewsService.java
+¦   ¦   ¦           ¦   ¦   
+¦   ¦   ¦           ¦   +---impl
+¦   ¦   ¦           ¦           catagoriesService.java
+¦   ¦   ¦           ¦           CustomUserDetailService.java
+¦   ¦   ¦           ¦           newService.java
+¦   ¦   ¦           ¦           
+¦   ¦   ¦           +---util
+¦   ¦   ¦                   SecurityUtils.java
+¦   ¦   ¦                   
+¦   ¦   +---resources
+¦   ¦   ¦   +---META-INF
+¦   ¦   ¦           persistence.xml
+¦   ¦   ¦           
+¦   ¦   +---webapp
+¦   ¦       ¦   index.jsp
+¦   ¦       ¦   
+¦   ¦       +---common
+¦   ¦       ¦   ¦   tablib.jsp
+¦   ¦       ¦   ¦   
+¦   ¦       ¦   +---admin
+¦   ¦       ¦   ¦       footer.jsp
+¦   ¦       ¦   ¦       header.jsp
+¦   ¦       ¦   ¦       menu.jsp
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---web
+¦   ¦       ¦           footer.jsp
+¦   ¦       ¦           header.jsp
+¦   ¦       ¦           
+¦   ¦       +---decorators
+¦   ¦       ¦       admin.jsp
+¦   ¦       ¦       login.jsp
+¦   ¦       ¦       web.jsp
+¦   ¦       ¦       
+¦   ¦       +---template
+¦   ¦       ¦   +---admin
+¦   ¦       ¦   ¦   +---assets
+¦   ¦       ¦   ¦   ¦   +---demo
+¦   ¦       ¦   ¦   ¦   ¦       chart-area-demo.js
+¦   ¦       ¦   ¦   ¦   ¦       chart-bar-demo.js
+¦   ¦       ¦   ¦   ¦   ¦       chart-pie-demo.js
+¦   ¦       ¦   ¦   ¦   ¦       datatables-demo.js
+¦   ¦       ¦   ¦   ¦   ¦       
+¦   ¦       ¦   ¦   ¦   +---img
+¦   ¦       ¦   ¦   ¦           error-404-monochrome.svg
+¦   ¦       ¦   ¦   ¦           
+¦   ¦       ¦   ¦   +---css
+¦   ¦       ¦   ¦   ¦       styles.css
+¦   ¦       ¦   ¦   ¦       
+¦   ¦       ¦   ¦   +---js
+¦   ¦       ¦   ¦           datatables-simple-demo.js
+¦   ¦       ¦   ¦           scripts.js
+¦   ¦       ¦   ¦           
+¦   ¦       ¦   +---login
+¦   ¦       ¦   ¦       style.css
+¦   ¦       ¦   ¦       
+¦   ¦       ¦   +---web
+¦   ¦       ¦       +---css
+¦   ¦       ¦       ¦       small-business.css
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---vendor
+¦   ¦       ¦           +---bootstrap
+¦   ¦       ¦           ¦   +---css
+¦   ¦       ¦           ¦   ¦       bootstrap-grid.css
+¦   ¦       ¦           ¦   ¦       bootstrap-grid.css.map
+¦   ¦       ¦           ¦   ¦       bootstrap-grid.min.css
+¦   ¦       ¦           ¦   ¦       bootstrap-grid.min.css.map
+¦   ¦       ¦           ¦   ¦       bootstrap-reboot.css
+¦   ¦       ¦           ¦   ¦       bootstrap-reboot.css.map
+¦   ¦       ¦           ¦   ¦       bootstrap-reboot.min.css
+¦   ¦       ¦           ¦   ¦       bootstrap-reboot.min.css.map
+¦   ¦       ¦           ¦   ¦       bootstrap.css
+¦   ¦       ¦           ¦   ¦       bootstrap.css.map
+¦   ¦       ¦           ¦   ¦       bootstrap.min.css
+¦   ¦       ¦           ¦   ¦       bootstrap.min.css.map
+¦   ¦       ¦           ¦   ¦       
+¦   ¦       ¦           ¦   +---js
+¦   ¦       ¦           ¦           bootstrap.bundle.js
+¦   ¦       ¦           ¦           bootstrap.bundle.js.map
+¦   ¦       ¦           ¦           bootstrap.bundle.min.js
+¦   ¦       ¦           ¦           bootstrap.bundle.min.js.map
+¦   ¦       ¦           ¦           bootstrap.js
+¦   ¦       ¦           ¦           bootstrap.js.map
+¦   ¦       ¦           ¦           bootstrap.min.js
+¦   ¦       ¦           ¦           bootstrap.min.js.map
+¦   ¦       ¦           ¦           
+¦   ¦       ¦           +---jquery
+¦   ¦       ¦                   jquery.js
+¦   ¦       ¦                   jquery.min.js
+¦   ¦       ¦                   jquery.min.map
+¦   ¦       ¦                   jquery.slim.js
+¦   ¦       ¦                   jquery.slim.min.js
+¦   ¦       ¦                   jquery.slim.min.map
+¦   ¦       ¦                   
+¦   ¦       +---WEB-INF
+¦   ¦           ¦   decorators.xml
+¦   ¦           ¦   web.xml
+¦   ¦           ¦   
+¦   ¦           +---context
+¦   ¦           ¦       applicationContext.xml
+¦   ¦           ¦       dispatcher-servlet.xml
+¦   ¦           ¦       security.xml
+¦   ¦           ¦       
+¦   ¦           +---views
+¦   ¦               ¦   login.jsp
+¦   ¦               ¦   
+¦   ¦               +---admin
+¦   ¦               ¦   ¦   home.jsp
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---news
+¦   ¦               ¦           edit.jsp
+¦   ¦               ¦           List.jsp
+¦   ¦               ¦           
+¦   ¦               +---web
+¦   ¦                       home.jsp
+¦   ¦                       test.jsp
+¦   ¦                       
+¦   +---test
+¦       +---java
+¦       +---resources
++---target
+    ¦   spring-mvc-2-1.0.war
+    ¦   
+    +---classes
+    ¦   +---com
+    ¦   ¦   +---spring
+    ¦   ¦       +---config
+    ¦   ¦       ¦       JPAAuditingConfig$AuditorAwareImpl.class
+    ¦   ¦       ¦       JPAAuditingConfig.class
+    ¦   ¦       ¦       JPAConfig.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---constant
+    ¦   ¦       ¦       SystemConstant.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---controller
+    ¦   ¦       ¦   +---admin
+    ¦   ¦       ¦   ¦       HomeController.class
+    ¦   ¦       ¦   ¦       NewsController.class
+    ¦   ¦       ¦   ¦       
+    ¦   ¦       ¦   +---web
+    ¦   ¦       ¦           HomeController.class
+    ¦   ¦       ¦           
+    ¦   ¦       +---DAO
+    ¦   ¦       ¦   ¦   genericDAO.class
+    ¦   ¦       ¦   ¦   icatagoriesDAO.class
+    ¦   ¦       ¦   ¦   iNewDAO.class
+    ¦   ¦       ¦   ¦   
+    ¦   ¦       ¦   +---impl
+    ¦   ¦       ¦           abstractDAO.class
+    ¦   ¦       ¦           catagoriesDAO.class
+    ¦   ¦       ¦           newDAO.class
+    ¦   ¦       ¦           
+    ¦   ¦       +---DTO
+    ¦   ¦       ¦       AbstractDTO.class
+    ¦   ¦       ¦       categoryDTO.class
+    ¦   ¦       ¦       MyUser.class
+    ¦   ¦       ¦       NewDTO.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---entity
+    ¦   ¦       ¦       BaseEntity.class
+    ¦   ¦       ¦       NewsEntity.class
+    ¦   ¦       ¦       RoleEntity.class
+    ¦   ¦       ¦       UserEntity.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---mapper
+    ¦   ¦       ¦       catagoryMapper.class
+    ¦   ¦       ¦       newMapper.class
+    ¦   ¦       ¦       rowMapper.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---model
+    ¦   ¦       ¦       abstractModel.class
+    ¦   ¦       ¦       catagoriesModel.class
+    ¦   ¦       ¦       newsModel.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---paging
+    ¦   ¦       ¦       Pageable.class
+    ¦   ¦       ¦       pageRequest.class
+    ¦   ¦       ¦       Sorter.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---repository
+    ¦   ¦       ¦       iNewRepository.class
+    ¦   ¦       ¦       UserRepository.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---security
+    ¦   ¦       ¦       CustomSuccessHandler.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---service
+    ¦   ¦       ¦   ¦   iCatagoriesService.class
+    ¦   ¦       ¦   ¦   iNewsService.class
+    ¦   ¦       ¦   ¦   
+    ¦   ¦       ¦   +---impl
+    ¦   ¦       ¦           catagoriesService.class
+    ¦   ¦       ¦           CustomUserDetailService.class
+    ¦   ¦       ¦           newService.class
+    ¦   ¦       ¦           
+    ¦   ¦       +---util
+    ¦   ¦               SecurityUtils.class
+    ¦   ¦               
+    ¦   +---META-INF
+    ¦           persistence.xml
+    ¦           
+    +---generated-sources
+    ¦   +---annotations
+    +---maven-archiver
+    ¦       pom.properties
+    ¦       
+    +---maven-status
+    ¦   +---maven-compiler-plugin
+    ¦       +---compile
+    ¦       ¦   +---default-compile
+    ¦       ¦           createdFiles.lst
+    ¦       ¦           inputFiles.lst
+    ¦       ¦           
+    ¦       +---testCompile
+    ¦           +---default-testCompile
+    ¦                   inputFiles.lst
+    ¦                   
+    +---spring-mvc-2-1.0
+    ¦   ¦   index.jsp
+    ¦   ¦   
+    ¦   +---common
+    ¦   ¦   ¦   tablib.jsp
+    ¦   ¦   ¦   
+    ¦   ¦   +---admin
+    ¦   ¦   ¦       footer.jsp
+    ¦   ¦   ¦       header.jsp
+    ¦   ¦   ¦       menu.jsp
+    ¦   ¦   ¦       
+    ¦   ¦   +---web
+    ¦   ¦           footer.jsp
+    ¦   ¦           header.jsp
+    ¦   ¦           
+    ¦   +---decorators
+    ¦   ¦       admin.jsp
+    ¦   ¦       login.jsp
+    ¦   ¦       web.jsp
+    ¦   ¦       
+    ¦   +---META-INF
+    ¦   +---template
+    ¦   ¦   +---admin
+    ¦   ¦   ¦   +---assets
+    ¦   ¦   ¦   ¦   +---demo
+    ¦   ¦   ¦   ¦   ¦       chart-area-demo.js
+    ¦   ¦   ¦   ¦   ¦       chart-bar-demo.js
+    ¦   ¦   ¦   ¦   ¦       chart-pie-demo.js
+    ¦   ¦   ¦   ¦   ¦       datatables-demo.js
+    ¦   ¦   ¦   ¦   ¦       
+    ¦   ¦   ¦   ¦   +---img
+    ¦   ¦   ¦   ¦           error-404-monochrome.svg
+    ¦   ¦   ¦   ¦           
+    ¦   ¦   ¦   +---css
+    ¦   ¦   ¦   ¦       styles.css
+    ¦   ¦   ¦   ¦       
+    ¦   ¦   ¦   +---js
+    ¦   ¦   ¦           datatables-simple-demo.js
+    ¦   ¦   ¦           scripts.js
+    ¦   ¦   ¦           
+    ¦   ¦   +---login
+    ¦   ¦   ¦       style.css
+    ¦   ¦   ¦       
+    ¦   ¦   +---web
+    ¦   ¦       +---css
+    ¦   ¦       ¦       small-business.css
+    ¦   ¦       ¦       
+    ¦   ¦       +---vendor
+    ¦   ¦           +---bootstrap
+    ¦   ¦           ¦   +---css
+    ¦   ¦           ¦   ¦       bootstrap-grid.css
+    ¦   ¦           ¦   ¦       bootstrap-grid.css.map
+    ¦   ¦           ¦   ¦       bootstrap-grid.min.css
+    ¦   ¦           ¦   ¦       bootstrap-grid.min.css.map
+    ¦   ¦           ¦   ¦       bootstrap-reboot.css
+    ¦   ¦           ¦   ¦       bootstrap-reboot.css.map
+    ¦   ¦           ¦   ¦       bootstrap-reboot.min.css
+    ¦   ¦           ¦   ¦       bootstrap-reboot.min.css.map
+    ¦   ¦           ¦   ¦       bootstrap.css
+    ¦   ¦           ¦   ¦       bootstrap.css.map
+    ¦   ¦           ¦   ¦       bootstrap.min.css
+    ¦   ¦           ¦   ¦       bootstrap.min.css.map
+    ¦   ¦           ¦   ¦       
+    ¦   ¦           ¦   +---js
+    ¦   ¦           ¦           bootstrap.bundle.js
+    ¦   ¦           ¦           bootstrap.bundle.js.map
+    ¦   ¦           ¦           bootstrap.bundle.min.js
+    ¦   ¦           ¦           bootstrap.bundle.min.js.map
+    ¦   ¦           ¦           bootstrap.js
+    ¦   ¦           ¦           bootstrap.js.map
+    ¦   ¦           ¦           bootstrap.min.js
+    ¦   ¦           ¦           bootstrap.min.js.map
+    ¦   ¦           ¦           
+    ¦   ¦           +---jquery
+    ¦   ¦                   jquery.js
+    ¦   ¦                   jquery.min.js
+    ¦   ¦                   jquery.min.map
+    ¦   ¦                   jquery.slim.js
+    ¦   ¦                   jquery.slim.min.js
+    ¦   ¦                   jquery.slim.min.map
+    ¦   ¦                   
+    ¦   +---WEB-INF
+    ¦       ¦   decorators.xml
+    ¦       ¦   web.xml
+    ¦       ¦   
+    ¦       +---classes
+    ¦       ¦   +---com
+    ¦       ¦   ¦   +---spring
+    ¦       ¦   ¦       +---config
+    ¦       ¦   ¦       ¦       JPAAuditingConfig$AuditorAwareImpl.class
+    ¦       ¦   ¦       ¦       JPAAuditingConfig.class
+    ¦       ¦   ¦       ¦       JPAConfig.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---constant
+    ¦       ¦   ¦       ¦       SystemConstant.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---controller
+    ¦       ¦   ¦       ¦   +---admin
+    ¦       ¦   ¦       ¦   ¦       HomeController.class
+    ¦       ¦   ¦       ¦   ¦       NewsController.class
+    ¦       ¦   ¦       ¦   ¦       
+    ¦       ¦   ¦       ¦   +---web
+    ¦       ¦   ¦       ¦           HomeController.class
+    ¦       ¦   ¦       ¦           
+    ¦       ¦   ¦       +---DAO
+    ¦       ¦   ¦       ¦   ¦   genericDAO.class
+    ¦       ¦   ¦       ¦   ¦   icatagoriesDAO.class
+    ¦       ¦   ¦       ¦   ¦   iNewDAO.class
+    ¦       ¦   ¦       ¦   ¦   
+    ¦       ¦   ¦       ¦   +---impl
+    ¦       ¦   ¦       ¦           abstractDAO.class
+    ¦       ¦   ¦       ¦           catagoriesDAO.class
+    ¦       ¦   ¦       ¦           newDAO.class
+    ¦       ¦   ¦       ¦           
+    ¦       ¦   ¦       +---DTO
+    ¦       ¦   ¦       ¦       AbstractDTO.class
+    ¦       ¦   ¦       ¦       categoryDTO.class
+    ¦       ¦   ¦       ¦       MyUser.class
+    ¦       ¦   ¦       ¦       NewDTO.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---entity
+    ¦       ¦   ¦       ¦       BaseEntity.class
+    ¦       ¦   ¦       ¦       NewsEntity.class
+    ¦       ¦   ¦       ¦       RoleEntity.class
+    ¦       ¦   ¦       ¦       UserEntity.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---mapper
+    ¦       ¦   ¦       ¦       catagoryMapper.class
+    ¦       ¦   ¦       ¦       newMapper.class
+    ¦       ¦   ¦       ¦       rowMapper.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---model
+    ¦       ¦   ¦       ¦       abstractModel.class
+    ¦       ¦   ¦       ¦       catagoriesModel.class
+    ¦       ¦   ¦       ¦       newsModel.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---paging
+    ¦       ¦   ¦       ¦       Pageable.class
+    ¦       ¦   ¦       ¦       pageRequest.class
+    ¦       ¦   ¦       ¦       Sorter.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---repository
+    ¦       ¦   ¦       ¦       iNewRepository.class
+    ¦       ¦   ¦       ¦       UserRepository.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---security
+    ¦       ¦   ¦       ¦       CustomSuccessHandler.class
+    ¦       ¦   ¦       ¦       
+    ¦       ¦   ¦       +---service
+    ¦       ¦   ¦       ¦   ¦   iCatagoriesService.class
+    ¦       ¦   ¦       ¦   ¦   iNewsService.class
+    ¦       ¦   ¦       ¦   ¦   
+    ¦       ¦   ¦       ¦   +---impl
+    ¦       ¦   ¦       ¦           catagoriesService.class
+    ¦       ¦   ¦       ¦           CustomUserDetailService.class
+    ¦       ¦   ¦       ¦           newService.class
+    ¦       ¦   ¦       ¦           
+    ¦       ¦   ¦       +---util
+    ¦       ¦   ¦               SecurityUtils.class
+    ¦       ¦   ¦               
+    ¦       ¦   +---META-INF
+    ¦       ¦           persistence.xml
+    ¦       ¦           
+    ¦       +---context
+    ¦       ¦       applicationContext.xml
+    ¦       ¦       dispatcher-servlet.xml
+    ¦       ¦       security.xml
+    ¦       ¦       
+    ¦       +---lib
+    ¦       ¦       antlr-2.7.7.jar
+    ¦       ¦       aopalliance-1.0.jar
+    ¦       ¦       aspectjrt-1.8.10.jar
+    ¦       ¦       aspectjweaver-1.8.9.jar
+    ¦       ¦       commons-logging-1.2.jar
+    ¦       ¦       dom4j-1.6.1.jar
+    ¦       ¦       hibernate-commons-annotations-4.0.5.Final.jar
+    ¦       ¦       hibernate-core-4.3.6.Final.jar
+    ¦       ¦       hibernate-entitymanager-4.3.6.Final.jar
+    ¦       ¦       hibernate-jpa-2.1-api-1.0.0.Final.jar
+    ¦       ¦       jandex-1.1.0.Final.jar
+    ¦       ¦       javassist-3.18.1-GA.jar
+    ¦       ¦       jboss-logging-3.1.3.GA.jar
+    ¦       ¦       jboss-logging-annotations-1.2.0.Beta1.jar
+    ¦       ¦       jboss-transaction-api_1.2_spec-1.0.0.Final.jar
+    ¦       ¦       jcl-over-slf4j-1.7.25.jar
+    ¦       ¦       jstl-1.2.jar
+    ¦       ¦       mysql-connector-j-8.0.33.jar
+    ¦       ¦       protobuf-java-3.21.9.jar
+    ¦       ¦       sitemesh-2.4.2.jar
+    ¦       ¦       slf4j-api-1.7.25.jar
+    ¦       ¦       spring-aop-4.3.13.RELEASE.jar
+    ¦       ¦       spring-aspects-4.3.13.RELEASE.jar
+    ¦       ¦       spring-beans-4.3.13.RELEASE.jar
+    ¦       ¦       spring-context-4.3.13.RELEASE.jar
+    ¦       ¦       spring-context-support-4.3.13.RELEASE.jar
+    ¦       ¦       spring-core-4.3.13.RELEASE.jar
+    ¦       ¦       spring-data-commons-1.13.5.RELEASE.jar
+    ¦       ¦       spring-data-jpa-1.11.5.RELEASE.jar
+    ¦       ¦       spring-expression-4.3.13.RELEASE.jar
+    ¦       ¦       spring-jdbc-4.3.13.RELEASE.jar
+    ¦       ¦       spring-orm-4.3.13.RELEASE.jar
+    ¦       ¦       spring-security-acl-3.2.8.RELEASE.jar
+    ¦       ¦       spring-security-config-3.2.8.RELEASE.jar
+    ¦       ¦       spring-security-core-3.2.8.RELEASE.jar
+    ¦       ¦       spring-security-taglibs-3.2.8.RELEASE.jar
+    ¦       ¦       spring-security-web-3.2.8.RELEASE.jar
+    ¦       ¦       spring-tx-4.3.13.RELEASE.jar
+    ¦       ¦       spring-web-4.3.13.RELEASE.jar
+    ¦       ¦       spring-webmvc-4.3.13.RELEASE.jar
+    ¦       ¦       xml-apis-1.0.b2.jar
+    ¦       ¦       
+    ¦       +---views
+    ¦           ¦   login.jsp
+    ¦           ¦   
+    ¦           +---admin
+    ¦           ¦   ¦   home.jsp
+    ¦           ¦   ¦   
+    ¦           ¦   +---news
+    ¦           ¦           edit.jsp
+    ¦           ¦           List.jsp
+    ¦           ¦           
+    ¦           +---web
+    ¦                   home.jsp
+    ¦                   test.jsp
+    ¦                   
+    +---test-classes
