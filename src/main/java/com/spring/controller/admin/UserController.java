@@ -1,5 +1,7 @@
 package com.spring.controller.admin;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.DTO.UserDTO;
+import com.spring.entity.RoleEntity;
 import com.spring.service.iRoleService;
 import com.spring.service.iUserService;
 
@@ -41,8 +44,8 @@ public class UserController {
 		if(id != null) {
 			user = userService.findById(id);
 		}
-/*		md.addObject("role", roleService.findAll());*/
 		md.addObject("user",user);
+		
 		return md;
 		
 	}

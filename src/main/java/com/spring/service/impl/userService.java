@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.DTO.UserDTO;
 import com.spring.converter.UserConverter;
+import com.spring.entity.RoleEntity;
 import com.spring.entity.UserEntity;
 import com.spring.repository.UserRepository;
 import com.spring.service.iUserService;

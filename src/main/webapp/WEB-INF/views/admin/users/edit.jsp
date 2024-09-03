@@ -84,19 +84,20 @@
 
 						<div class="space-4"></div>
 						
-						<%-- <div class="form-group row">
+						<%--  <div class="form-group row">
 							<div class="d-flex justify-content-evenly">
 								<label class="col-sm-2 control-label no-padding-right lh-lg"
-									for="catagoryCode"> Thể loại 
+									for="catagoryCode"> Vai trò 
 								</label> 
 								
 								<div class="col-sm-9">
 						
-									<form:select path="code" id="code" cssClass="form-control">
-										<form:option value="" label="--chọn thể loại--" />
+									<form:select path="role" id="code" cssClass="form-control">
+										<form:option value="" label="--chọn vai trò--" />
 										<form:options items="${role }"/>
 									</form:select>
 								</div>
+							</div> 
 						</div> --%>
 						
 						<div class="space-4"></div>

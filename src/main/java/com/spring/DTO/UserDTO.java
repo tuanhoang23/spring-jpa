@@ -5,7 +5,7 @@ public class UserDTO extends AbstractDTO<UserDTO>{
 	private String password;
 	private int status;
 	private String username;
-	
+
 	public UserDTO() {
 		
 	}

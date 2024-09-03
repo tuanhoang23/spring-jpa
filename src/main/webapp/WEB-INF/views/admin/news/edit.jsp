@@ -2,6 +2,7 @@
 <%@ include file='/common/tablib.jsp'%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <c:url  var ="ListUrl" value ="/quan-tri/bai-viet/danh-sach"/>
+<c:url  var ="EditNewsUrl" value ="/quan-tri/bai-viet/sua-bai-viet"/>
 <c:url  var ="ApiUrl" value ="/api/new"/>
 <html>
 <head>
@@ -36,7 +37,14 @@
 
 			<div class="">
 				<div class="col-xs-12 mt-5">
-
+					<c:if test="${not empty message }">
+						<div class="d-flex justify-content-end mr-5">
+							<div class="alert alert-${alert } text-center col-4 " role="alert">
+						  		${message }
+							</div>
+						</div>
+						
+					</c:if>
 					<form:form class="form-horizontal" role="form" id="formSubmit" modelAttribute="model">
 
 						<div class="form-group row">
@@ -170,10 +178,10 @@
 				data : JSON.stringify(data),
 				dataType : 'json',
 				success: function(result){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${EditNewsUrl}?id="+result.id+"&mesage=insert_success ";
 				},
 				error:function(error){
-					window.location.href ="${ListUrl}?page=1&limit=2";
+					window.location.href ="${ListUrl}?page=1&limit=2&message=error_system";
 				}
 				
 				
@@ -189,10 +197,10 @@
 				data:JSON.stringify(data),
 				dataType:'json',
 				success: function(result){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${EditNewsUrl}?id="+result.id+"&message=update_success ";
 				},
 				error : function(error){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${EditNewsUrl}?id="+result.id+"&message=error_system ";
 				}
 			})
 		}

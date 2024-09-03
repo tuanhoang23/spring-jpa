@@ -17,7 +17,15 @@
 				<div class="text-center mt-1">
 					<span class="text-center h1 responsive-font">QUẢN LÝ BÀI VIẾT</span>
 				</div>
+				
 				<div class="mt-5 p-2">
+					<c:if test="${not empty message }">
+							<div class="d-flex justify-content-center mr-1">
+								<div class="alert alert-${alert } text-center col-4 " role="alert">
+							  		${message }
+								</div>
+							</div>
+					</c:if>
 					<div class="d-flex justify-content-end mb-3">
 						<a class="btn btn-success" title="thêm bài viết" href="<c:url value="/quan-tri/bai-viet/sua-bai-viet"/>"> <i
 							class="fa-solid fa-folder-plus m-1"></i> <span>Thêm</span>
