@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file='/common/tablib.jsp'%>
+<c:url  var ="ApiUrl" value ="/api/new"/>
+<c:url  var ="ListUrl" value ="/quan-tri/bai-viet/danh-sach"/>
 <!DOCTYPE html>
 <html>
 
@@ -29,10 +31,11 @@
 					<div class="d-flex justify-content-end mb-3">
 						<a class="btn btn-success" title="thêm bài viết" href="<c:url value="/quan-tri/bai-viet/sua-bai-viet"/>"> <i
 							class="fa-solid fa-folder-plus m-1"></i> <span>Thêm</span>
-						</a> <a class="btn btn-danger mx-2" title="thêm bài viết" href=""
-							id="btnRemove"> <i class="fa-solid fa-trash m-1"></i> <span
-							class="">Xóa</span>
-						</a>
+						</a> 
+						<button class="btn btn-danger mx-2" id="btnRemove" type="button" title="xóa" onclick="warningBeforDelete()"> 
+							<i class="fa-solid fa-trash m-1"></i> 
+							<span class="">Xóa</span>
+						</button>
 					</div>
 					<table class="table mt-100">
 						<thead class="text-center">
@@ -40,8 +43,8 @@
 								<th scope="col">Tên bài viết</th>
 								<th scope="col">Mô tả ngắn</th>
 								<th scope="col">#</th>
-								<!-- <th scope="col"><input type="checkbox" id="checkAll"><span
-									class="p-1">All</span></th> -->
+								<th scope="col"><input type="checkbox" id="checkAll"><span
+									class="p-1">All</span></th> 
 	
 							</tr>
 						</thead>
@@ -58,8 +61,8 @@
 											<i class="fa-solid fa-pen-to-square m-1"></i>sửa
 										</a>
 									</td>
-									<%-- <td width="5%"><input class="" type="checkbox"
-										id="c_${item.id}" value="${item.id}"></td> --%>
+									<td width="5%"><input class="" type="checkbox"
+										id="c_${item.id}" value="${item.id}"></td>
 								</tr>
 							</c:forEach>
 	
@@ -96,6 +99,43 @@
 				}
 			});
 		});
+
+		function warningBeforDelete(){
+				swal({
+				  title: "Xác nhận xóa?",
+				  text: "Bạn có chắc chắn muốn xóa!",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonClass: "btn-success",
+				  cancelButtonClass:"btn-danger",
+				  confirmButtonText: "Xác nhận",
+				  cancelButtonText: "Hủy!"
+				}).then(function(isConfirm) {
+				  if (isConfirm.value === true) {
+					  
+				   	var ids = $('tbody input[type=checkbox]:checked').map(function(){
+						return $(this).val();
+					}).get();
+					remove(ids);
+				  } 
+				});
+		}
+
+		function remove(data){
+			$.ajax({
+				url:'${ApiUrl}',
+				type:'DELETE',
+				contentType :'application/json',
+				data:JSON.stringify(data), 
+				success : function(success){
+					window.location.href = "${ListUrl}?page=1&limit=2&message=remove_success";
+				},
+				error : function(success){
+					window.location.href = "${ListUrl}?page=1&limit=2&message=error_system";
+				}
+
+			});
+		}
 	</script>
 </body>
 

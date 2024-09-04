@@ -28,6 +28,6 @@ public class NewApi {
 	
 	@DeleteMapping("/api/new")
 	public void deleteNew(@RequestBody long[] ids) {
-		
+		newService.delete(ids);
 	}
 }

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.DTO.NewDTO;
-import com.spring.converter.CategoryConverter;
 import com.spring.converter.NewsConverter;
 import com.spring.entity.CategoryEntity;
 import com.spring.entity.NewsEntity;
@@ -26,8 +25,8 @@ public class newService implements iNewsService {
 	@Autowired
 	private categoryRepository categoryRepository;
 	
-	@Autowired
-	private CategoryConverter categoryConverter;
+/*	@Autowired
+	private CategoryConverter categoryConverter;*/
 	
 	@Autowired
 	private iNewRepository newRepository;
@@ -87,6 +86,14 @@ public class newService implements iNewsService {
 			newEntity.setCategory(category);
 		}
 		return newConverter.toDto(newRepository.save(newEntity));
+	}
+
+	@Override
+	@Transactional
+	public void delete(long[] ids) {
+		for(long id :ids) {
+			newRepository.delete(id);
+		}
 	}
 
 

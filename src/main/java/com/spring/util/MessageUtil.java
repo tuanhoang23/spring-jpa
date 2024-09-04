@@ -16,6 +16,9 @@ public class MessageUtil {
 		}else if(mes.equals("insert_success")) {
 			result.put("message", "insert success");
 			result.put("alert", "success");
+		}else if(mes.equals("remove_success")) {
+			result.put("message", "remove success");
+			result.put("alert", "success");
 		}else if(mes.equals("error_system")) {
 			result.put("message", "error system");
 			result.put("alert", "danger");
