@@ -12,5 +12,6 @@ public interface iUserService {
 	List<UserDTO> findAll(Pageable pageable);
 	int totalItems();
 	UserDTO findById(Long id);
+	UserDTO save(UserDTO dto);
 
 }

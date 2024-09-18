@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <c:url var="ListUrl" value="/quan-tri/nguoi-dung/danh-sach"/>
 <c:url var="UserUrl" value="/api/user"/>
+<c:url var="editUrl" value="/quan-tri/nguoi-dung/chinh-sua"/>
 <html>
 <head>
 <title>Chỉnh Sửa Tài Khoản</title>
@@ -37,6 +38,7 @@
 			<div class="">
 				<div class="col-xs-12 mt-5">
 
+					<%--@elvariable id="user" type=""--%>
 					<form:form class="form-horizontal" role="form" id="formSubmit" modelAttribute="user">
 
 						<div class="form-group row">
@@ -84,28 +86,28 @@
 
 						<div class="space-4"></div>
 						
-						<%--  <div class="form-group row">
+						<div class="form-group row">
 							<div class="d-flex justify-content-evenly">
 								<label class="col-sm-2 control-label no-padding-right lh-lg"
-									for="catagoryCode"> Vai trò 
+									for="code_role"> Vai trò
 								</label> 
 								
-								<div class="col-sm-9">
+								<div class="col-sm-4">
 						
-									<form:select path="role" id="code" cssClass="form-control">
+									<form:select path="code_role" id="code_role" cssClass="form-control">
 										<form:option value="" label="--chọn vai trò--" />
-										<form:options items="${role }"/>
+										<form:options items="${ role }"/>
 									</form:select>
 								</div>
 							</div> 
-						</div> --%>
+						</div>
 						
 						<div class="space-4"></div>
 						
 						<div class="form-group row">
 							<div class="d-flex justify-content-evenly">
 								<label class="col-sm-2 control-label no-padding-right lh-lg "
-									for="catagoryCode"> Trạng thái 
+									for="status"> Trạng thái
 								</label> 
 								
 								<div class="col-sm-4">
@@ -159,7 +161,6 @@
 			}else{
 				updateUser(data);
 			}
-			console.log(form);
 		});
 
 		function addUser(data){
@@ -170,10 +171,10 @@
 				data: JSON.stringify(data),
 				dataType:'json',
 				success : function(success){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${editUrl}?id="+success.id+"&message=insert_success";
 				},
 				error : function(error){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${ListUrl}?page=1&limit=2&message=error_system";
 				}
 				
 			});
@@ -187,10 +188,10 @@
 				data:JSON.stringify(data),
 				dataType:'json',
 				success : function(success){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${editUrl}?id="+success.id+"&message=update_success";
 				},
 				error : function(error){
-					window.location.href = "${ListUrl}?page=1&limit=2";
+					window.location.href = "${editUrl}?id="+error.id+"&message=error_system";
 				}
 			});
 		}

@@ -19,12 +19,12 @@ public class roleService implements iRoleService {
 
 	@Override
 	public Map<String, String> findAll() {
-		Map<String,String> user = new HashMap<>();
+		Map<String,String> role = new HashMap<>();
 		List<RoleEntity> entity = roleRepository.findAll();
 		for(RoleEntity item: entity) {
-			user.put(item.getCode(), item.getName());
+			role.put(item.getCode(), item.getName());
 		}
-		return user;
+		return role;
 	}
 	
 

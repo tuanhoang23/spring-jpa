@@ -23,7 +23,11 @@ public abstract class BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // autuincrement
 	private long id;
-	
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	@Column(name ="created_at")
 	@CreatedDate
 	private Date createdAt;

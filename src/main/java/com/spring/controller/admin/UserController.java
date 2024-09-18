@@ -20,8 +20,8 @@ import com.spring.service.iUserService;
 public class UserController {
 	@Autowired
 	private iUserService userService;
-/*	@Autowired
-	private iRoleService roleService;*/
+	@Autowired
+	private iRoleService roleService;
 	
 	@RequestMapping(value = "/quan-tri/nguoi-dung/danh-sach",method = RequestMethod.GET)
 	public ModelAndView userList(@RequestParam("page") int page , @RequestParam("limit") int limit) {
@@ -45,7 +45,7 @@ public class UserController {
 			user = userService.findById(id);
 		}
 		md.addObject("user",user);
-		
+		md.addObject("role",roleService.findAll());
 		return md;
 		
 	}

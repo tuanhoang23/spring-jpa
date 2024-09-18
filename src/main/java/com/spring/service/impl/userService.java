@@ -3,6 +3,7 @@ package com.spring.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.spring.entity.RoleEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import com.spring.converter.UserConverter;
 import com.spring.entity.UserEntity;
 import com.spring.repository.UserRepository;
 import com.spring.service.iUserService;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class userService implements iUserService {
@@ -48,6 +50,13 @@ public class userService implements iUserService {
 	public UserDTO findById(Long id) {
 		UserEntity user = userRepository.findOne(id);
 		return userConverter.toDto(user);
+	}
+
+	@Override
+	@Transactional
+	public UserDTO save(UserDTO dto) {
+		UserEntity user = userConverter.toEntity(dto);
+		return userConverter.toDto(userRepository.save(user));
 	}
 
 }
