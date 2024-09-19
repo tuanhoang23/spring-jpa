@@ -16,11 +16,16 @@
 <link rel="stylesheet"
 	href="<c:url value="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css"/>" />
 	<style>
-	.main-content-inner {
- 	 	overflow-x: hidden;
- 	 	align-items:center;
-	}
+		.main-content-inner {
+	 	 	overflow-x: hidden;
+	 	 	align-items:center;
+		}
+	 	a {
+            text-decoration: none; /* Bỏ gạch chân */
+            color: white; /* Chuyển chữ sang màu trắng */
+        }
 	</style>
+
 </head>
 <body>
 	<div class="main-content-inner">
@@ -58,7 +63,7 @@
 						
 									<form:select path="catagoryCode" id="catagoryCode" cssClass="form-control">
 										<form:option value="" label="--chọn thể loại--" />
-										<form:options items="${category }"/>
+										<form:options items="${category}"/>
 									</form:select>
 								</div>
 								
@@ -144,7 +149,7 @@
 								</c:if>
 
 								<button class="btn btn-success" type="button">
-									<i class="ace-icon fa fa-undo bigger-110"></i> Hủy
+									<i class="ace-icon fa fa-undo bigger-110"></i><a href="<c:url value ="/quan-tri/bai-viet/danh-sach?page=1&limit=2"/>">Thoát</a>
 								</button>
 							</div>
 						</div>

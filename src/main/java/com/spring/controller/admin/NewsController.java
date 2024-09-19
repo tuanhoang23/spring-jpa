@@ -27,6 +27,7 @@ public class NewsController {
 	
 	@Autowired
 	private iCategoryService categoryService;
+
 	@Autowired
 	private MessageUtil messageUtil;
 

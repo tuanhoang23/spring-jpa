@@ -89,12 +89,12 @@
 						<div class="form-group row">
 							<div class="d-flex justify-content-evenly">
 								<label class="col-sm-2 control-label no-padding-right lh-lg"
-									for="code"> Vai trò
+									for="code_role"> Vai trò
 								</label> 
 								
 								<div class="col-sm-4">
 						
-									<form:select path="code_role" id="code" cssClass="form-control">
+									<form:select path="code_role" id="code_role" cssClass="form-control">
 										<form:option value="" label="--chọn vai trò--" />
 										<form:options items="${ role }"/>
 									</form:select>

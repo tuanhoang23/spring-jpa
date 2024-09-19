@@ -58,7 +58,7 @@
 						
 									<form:select path="catagoryCode" id="catagoryCode" cssClass="form-control">
 										<form:option value="" label="--chọn thể loại--" />
-										<form:options items="${category }"/>
+										<form:options items="${category}"/>
 									</form:select>
 								</div>
 								

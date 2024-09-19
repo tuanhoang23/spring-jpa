@@ -43,6 +43,18 @@ public class newService implements iNewsService {
 	}
 
 	@Override
+	public List<NewDTO> findAllnews() {
+		List<NewDTO> models = new ArrayList<>();
+		List<NewsEntity> news = newRepository.findAll();
+		for(NewsEntity item : news) {
+			NewDTO dtonew = newConverter.toDto(item);
+			models.add(dtonew);
+		}
+		return models;
+
+	}
+
+	@Override
 	public int totalItems() {
 		return (int)newRepository.count();
 	}

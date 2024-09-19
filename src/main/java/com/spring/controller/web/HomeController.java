@@ -3,6 +3,8 @@ package com.spring.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.spring.service.iNewsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -13,10 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller(value = "homeControllerWeb")
 public class HomeController {
+	@Autowired
+	private iNewsService newsService;
 	
 	@RequestMapping(value ="/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homepage() {
 		ModelAndView md = new ModelAndView("web/home");
+		md.addObject("news",newsService.findAllnews());
 		return md;
 	}
 	

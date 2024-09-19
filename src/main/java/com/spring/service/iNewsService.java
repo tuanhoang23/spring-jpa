@@ -11,6 +11,7 @@ import com.spring.DTO.NewDTO;
 public interface iNewsService {
 	
 	List<NewDTO> findAll(Pageable pageable);
+	List<NewDTO> findAllnews();
 	int totalItems();
 	NewDTO findById(long id);
 	NewDTO insert (NewDTO dto);
