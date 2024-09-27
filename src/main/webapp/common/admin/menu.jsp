@@ -14,11 +14,11 @@
 					<i class="fas fa-tachometer-alt"></i>
 				</div> Danh sách bài viết
 			</a>
-			<a class="nav-link" href="<c:url value="/quan-tri/nguoi-dung/danh-sach?page=1&limit=2"/> ">
-				<div class="sb-nav-link-icon">
-					<i class="fas fa-tachometer-alt"></i>
-				</div> Danh sách người dùng
-			</a>
+<%--			<a class="nav-link" href="<c:url value="/quan-tri/nguoi-dung/danh-sach?page=1&limit=2"/> ">--%>
+<%--				<div class="sb-nav-link-icon">--%>
+<%--					<i class="fas fa-tachometer-alt"></i>--%>
+<%--				</div> Danh sách người dùng--%>
+<%--			</a>--%>
 		</div>
 	</div>
 	<div class="sb-sidenav-footer">
