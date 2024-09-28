@@ -16,17 +16,24 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="<c:url value="/trang-chu" />">Home <span class="sr-only">(current)</span>
-				</a></li>
+<%--				<li class="nav-item active"><a class="nav-link"--%>
+<%--					href="<c:url value="/trang-chu" />">Home <span class="sr-only">(current)</span>--%>
+<%--				</a></li>--%>
 				<security:authorize access="isAnonymous()">
 					<li class="nav-item"><a class="nav-link"
 						href="<c:url value='/dang-nhap'/>">Đăng nhập</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>
+<%--					<li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>--%>
 				</security:authorize>
 				<security:authorize access="isAuthenticated()">
-					<li class="nav-item"><a class="nav-link"
-						href="<c:url value='/dang-nhap'/>">Wellcome <%=SecurityUtils.getPrincipal().getFullname()%></a></li>
+					<security:authorize access="hasRole('USER')">
+						<li class="nav-item"><a class="nav-link"
+												href="" >Wellcome <%=SecurityUtils.getPrincipal().getFullname()%></a></li>
+					</security:authorize>
+					<security:authorize access="hasRole('ADMIN')">
+						<li class="nav-item">
+							<a class="nav-link" href="<c:url value='/quan-tri/trang-chu'/>">Trang Quản Trị</a>
+						</li>
+					</security:authorize>
 					<li class="nav-item"><a class="nav-link" href="<c:url value='/thoat'/>">Thoát</a></li>
 				</security:authorize>
 

@@ -16,7 +16,7 @@
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form> -->
-            
+
             <a class="ms-auto me-0 me-md-3 my-2 my-md-0 text-white">Xin chào , <%=SecurityUtils.getPrincipal().getFullname() %></a>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 ml-2">

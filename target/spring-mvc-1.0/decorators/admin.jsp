@@ -9,6 +9,9 @@
 	<link href="<c:url value='/template/admin/sweetalert/sweetalert2.min.css' />"rel="stylesheet" >
 	<link href="<c:url value='/template/web/vendor/bootstrap/css/bootstrap.min.css'/> " rel="stylesheet"> 
 	<script src="<c:url value="https://code.jquery.com/jquery-3.6.0.min.js"/>"></script>
+	<%-- <script src=" <c:url value="/template/ckeditor/ckeditor.js"/>"> </script>  --%>
+
+	<script src="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.js"></script>
 	
 </head>
 
@@ -30,6 +33,7 @@
 	<script src="<c:url value='/template/admin/paging/jquery.twbsPagination.js'/>"></script>
 	<script src="<c:url value='/template/admin/sweetalert/sweetalert2.min.js'/>"></script>
 	<script src="<c:url value='https://use.fontawesome.com/releases/v6.3.0/js/all.js'/>"></script>
+	
 
 </body>
 </html>

@@ -9,6 +9,11 @@
 	<div class="sb-sidenav-menu">
 		<div class="nav">
 			<div class="sb-sidenav-menu-heading">Danh Mục</div>
+			<a class="nav-link" href="<c:url value="/trang-chu"/> ">
+				<div class="sb-nav-link-icon">
+					<i class="fas fa-tachometer-alt"></i>
+				</div> Trang chủ
+			</a>
 			<a class="nav-link" href="<c:url value="/quan-tri/bai-viet/danh-sach?page=1&limit=2"/> ">
 				<div class="sb-nav-link-icon">
 					<i class="fas fa-tachometer-alt"></i>

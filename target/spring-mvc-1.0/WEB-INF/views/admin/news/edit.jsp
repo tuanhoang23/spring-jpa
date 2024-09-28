@@ -7,20 +7,32 @@
 <html>
 <head>
 <title>Sửa bài viết</title>
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<%--	<script src="<c:url value='/template/ckeditor5/ckeditor5.js' />"></script>--%>
-<link rel="stylesheet"
-	href="<c:url value="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css"/>" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<%--<link rel="stylesheet" href="<c:url value="https://cdn.ckeditor.com/ckeditor5/42.0.1/ckeditor5.css"/>" />  --%>
+	
+	<%-- <script src=" <c:url value="/template/ckeditor/ckeditor.js"/>"> </script> --%>
 	<style>
-	.main-content-inner {
- 	 	overflow-x: hidden;
- 	 	align-items:center;
-	}
+		.main-content-inner {
+	 	 	overflow-x: hidden;
+	 	 	align-items:center;
+		}
+	 	a {
+            text-decoration: none; /* Bỏ gạch chân */
+            color: white; /* Chuyển chữ sang màu trắng */
+        }
 	</style>
+	<script >
+		document.addEventListener('DOMContentLoaded', function () {
+		    ClassicEditor
+		        .create(document.querySelector('#content'))
+		        .catch(error => {
+		            console.error('There was a problem initializing the editor.', error);
+		        });
+		});
+	</script>
+
 </head>
 <body>
 	<div class="main-content-inner">
@@ -144,7 +156,7 @@
 								</c:if>
 
 								<button class="btn btn-success" type="button">
-									<i class="ace-icon fa fa-undo bigger-110"></i> Hủy
+									<i class="ace-icon fa fa-undo bigger-110"></i><a href="<c:url value ="/quan-tri/bai-viet/danh-sach?page=1&limit=2"/>">Thoát</a>
 								</button>
 							</div>
 						</div>
@@ -155,6 +167,7 @@
 		</div>
 	</div>
 	<script>
+		
 		$('#btnAddNews').click(function (e){
 			e.preventDefault();
 			var data = {};
